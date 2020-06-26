@@ -12,6 +12,7 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
@@ -28,7 +29,7 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Services</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact-section">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -47,27 +48,25 @@
         <section class="about-section text-center" id="about">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h1 class="text-white mb-4">The Mountains Are Calling, I Must Go.</h1>
+                    <div class="col-lg-9 mx-auto">
+                        <h2 class="text-white mb-4" id="secondary">"The Mountains Are Calling, I Must Go."</h2>
                         <p class="text-white-50">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
-                            Libero volutpat sed cras ornare arcu. Augue lacus viverra vitae congue eu consequat ac felis donec. 
-                            Sit amet consectetur adipiscing elit pellentesque habitant 
-                            <a href="https://startbootstrap.com/template-overviews/grayscale/">morbi tristique.</a>
-                              Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim.
+                            John Muir’s immortal words inspire us in our exploration and creative endeavors in the expansive 
+                            landscapes surrounding us. From cactus to clouds; and from palms to pines - 
+                            we’re excited to share the magic of California’s Route 74 with you.
                         </p>
                     </div>
                 </div>
                 <div class="biocontainer">
                     <div class="biocard">
-                        <img src="assets/img/headshot2.jpeg" class="headshot"/>
+                        <img src="assets/img/kari.jpeg" class="headshot"/>
                         <h3>Kari Hay</h3>
                         <p class="biotitle">
                             Hairstylist, dream manifestor.
                         </p>
                     </div>
                     <div class="biocard">
-                        <img src="assets/img/headshot.jpg" class="headshot"/>
+                        <img src="assets/img/dean.jpeg" class="headshot"/>
                         <h3 class="biotitle">Dean Hay</h3>
                         <p class="bio">
                             Event planner, whale trainer, mountain concierge.
@@ -84,9 +83,10 @@
                     <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/a.jpg" alt="" /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
-                            <h4>Your Mountain Concierge</h4>
+                            <h4>“Of all the paths you take in life, make sure a few are dirt…”</h4>
                             <p class="text-black-50 mb-0">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                As you enjoy the epic vistas of our scenic highway we can provide you with some additional 
+                                routes and ventures, hidden gems, event planning, spa and salon services and more. 
                             </p>
                         </div>
                     </div>
@@ -127,7 +127,7 @@
                 </div>
                  <!-- Project Three Row-->
                  <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/k.jpeg" alt="" /></div>
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/m.jpeg" alt="" /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -142,23 +142,65 @@
                 </div>
             </div>
         </section>
-        <!-- Signup-->
+        <!--Section: Contact v.2-->
         <section class="signup-section" id="signup">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-10 col-lg-8 mx-auto text-center">
-                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-                        <form class="form-inline d-flex">
-                            <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" type="email" placeholder="Enter email address..." />
-                            <button class="btn btn-primary mx-auto" type="submit">Subscribe</button>
-                        </form>
+                <div class="col-md-10 col-lg-8 mx-auto text-center">
+                    <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                    <h1 class="text-white mb-5" id="secondary">Contact us!</h1>
+                    <!-- <p class="text-white mb-5 text-center w-responsive mx-auto" id="secondary">
+                        Do you have any questions? Please do not hesitate to contact us directly. 
+                        Our team will come back to you within
+                        a matter of hours to help you.</p> -->
+                    <div class="row" id="contact-form-container">
+                        <div class="col-md-9 mb-md-0 mb-5">
+                            <form id="form-inline d-flex" name="contact-form" action="mail.php" method="POST">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="md-form mb-0">
+                                            <input type="text" id="name" name="name" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" placeholder="Your name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="md-form mb-0">
+                                            <input type="text" id="email" name="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" placeholder="Email address">
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="md-form mb-0">
+                                            <input type="text" id="subject" name="subject" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" placeholder="Subject">
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="md-form" height="500">
+                                            <textarea type="text" id="message" name="message" rows="8" class="form-control md-textarea" placeholder="Your message"></textarea>
+                                            <br>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" name="updates" id="updates" value="1">
+                                            <label for="updates" class="form-check-label text-white-50">Notify me about new offers</label>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="text-center text-md-center">
+                                <button class="btn btn-primary mx-auto" type="submit" onclick="document.getElementById('contact-form').submit();">Send</button>
+                            </div>
+                            <div class="status"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Contact-->
-        <section class="contact-section bg-black">
+        <section class="contact-section bg-black" id="contact-section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 mb-3 mb-md-0">
@@ -168,6 +210,7 @@
                                 <h4 class="text-uppercase m-0">Address</h4>
                                 <hr class="my-4" />
                                 <div class="small text-black-50">
+                                    Salon @ Destination 74 <br>
                                     <a target="_blank" href="https://www.google.com/maps/place/67250+Toro+Vista+Dr,+Mountain+Center,+CA+92561/data=!4m2!3m1!1s0x80dbabc9bc98199d:0x81838bbab8c11174?sa=X&ved=2ahUKEwjt59Pay5vqAhVHvZ4KHez2AHUQ8gEwAHoECAsQAQ">
                                         67250 Toro Vista Dr. <br> Mountain Center, CA
                                     </a>
