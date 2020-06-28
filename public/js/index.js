@@ -54,3 +54,42 @@
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
 })(jQuery); // End of use strict
+
+// form submission
+
+document.getElementById('submit').addEventListener('click', (event) => {
+    event.preventDefault();
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const subject= document.getElementById('subject');
+    const message = document.getElementById('message');
+    const subscribe = document.getElementById('subscribe');
+
+    // conditionals to check if form inputs are empty
+    // if (email.value === null || email.value === '') {
+
+    // }
+
+    const fetchData = {
+        method: 'POST',
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+            name: name.value,
+            email: email.value,
+            subject: subject.value,
+            message: message.value,
+            subscribe: subscribe.value,
+            js: true
+        })
+    }
+
+    fetch('/send', fetchData)
+    .then(res => {
+        if (res.ok) {
+            console.log('IT WORKED!!!')
+        } else {
+            console.log('ya blew it')
+        }
+    })
+})
+
