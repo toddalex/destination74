@@ -1,10 +1,6 @@
-/*!
-    * Start Bootstrap - Grayscale v6.0.2 (https://startbootstrap.com/themes/grayscale)
-    * Copyright 2013-2020 Start Bootstrap
-    * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
-    */
-    (function ($) {
-    "use strict"; // Start of use strict
+// Start of use strict
+(function ($) {
+"use strict"; 
 
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
@@ -54,3 +50,49 @@
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
 })(jQuery); // End of use strict
+
+
+// form submission
+document.getElementById('submit').addEventListener('click', event => {
+    event.preventDefault()
+    const email = document.getElementById('email')
+    const mailformat = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
+    // validates email
+    if (email.value === null || email.value === ''|| !email.value.match(mailformat)) {
+        document.getElementById('error-message').innerHTML = 'Please enter a valid email address'
+        alert('Please enter a valid email address!')
+        setTimeout(()=> document.getElementById('error-message').innerHTML = '', 3000)
+    } else {
+        document.getElementById('submit').innerHTML = 'Sending'
+
+    const fetchData = {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+            email: email.value,
+            js: true 
+        })
+    }
+
+    fetch('/send', fetchData)
+    .then(res => {
+        if (res.ok) {
+            console.log('subscription confirmed.')
+            document.getElementById('email').style.display = 'none';
+            document.getElementById('submit').style.display = 'none';
+            document.getElementById('subscribe-header').innerHTML = 'Thank you!';
+            setTimeout( () => {
+                document.getElementById('email').style.display = 'block';
+                document.getElementById('submit').style.display = 'block';
+                document.getElementById('subscribe-header').innerHTML = 'Subscribe to receive updates!';
+                document.getElementById('submit').innerHTML = 'Submit';
+            }, 3000)
+        } else {
+           console.log('failed to send.')
+        }
+    })
+    .catch(err => console.log('POST ERROR: ', err))
+    }
+})
+
+
