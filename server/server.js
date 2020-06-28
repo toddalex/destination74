@@ -51,13 +51,13 @@ app.post('/send', (req, res) => {
         if (js) {
           res.sendStatus(200);
         } else {
-          console.log('get javascript')
+          console.log('Enable Javascript.')
           // res.redirect('/success.html')
         }
       }
     })
   } else {
-    res.status(404).send({mesage: 'Failed'})
+    res.status(404).send({mesage: 'Failed to send.'})
   }
 })
 

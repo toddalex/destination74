@@ -53,27 +53,23 @@
 
 
 // form submission
-document.getElementById('cta').addEventListener('click', event => {
+document.getElementById('submit').addEventListener('click', event => {
     event.preventDefault()
-    const name = document.getElementById('name')
     const email = document.getElementById('email')
-    const subject = document.getElementById('subject')
-    const message = document.getElementById('message')
-    const subscribe = document.getElementById('subscribe')
-
-        // if (this.email.value === null || this.email.value === '') {
-        //      error.classList.add('errorMessage')
-        // };
+    const mailformat = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
+    // validates email
+    if (email.value === null || email.value === ''|| !email.value.match(mailformat)) {
+        document.getElementById('error-message').innerHTML = 'Please enter a valid email address'
+        alert('Please enter a valid email address!')
+        setTimeout(()=> document.getElementById('error-message').innerHTML = '', 3000)
+    } else {
+        document.getElementById('submit').innerHTML = 'Sending'
 
     const fetchData = {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
-            name: name.value,
             email: email.value,
-            subject: subject.value,
-            message: message.value,
-            subscribe: subscribe.value,
             js: true 
         })
     }
@@ -81,13 +77,22 @@ document.getElementById('cta').addEventListener('click', event => {
     fetch('/send', fetchData)
     .then(res => {
         if (res.ok) {
-            console.log('yayyyyy it worked')
+            console.log('subscription confirmed.')
+            document.getElementById('email').style.display = 'none';
+            document.getElementById('submit').style.display = 'none';
+            document.getElementById('subscribe-header').innerHTML = 'Thank you!';
+            setTimeout( () => {
+                document.getElementById('email').style.display = 'block';
+                document.getElementById('submit').style.display = 'block';
+                document.getElementById('subscribe-header').innerHTML = 'Subscribe to receive updates!';
+                document.getElementById('submit').innerHTML = 'Submit';
+            }, 3000)
         } else {
-            // error.classList.add('errorMessage')
-            console.log('ya blew it')
+           console.log('failed to send.')
         }
     })
     .catch(err => console.log('POST ERROR: ', err))
+    }
 })
 
 
