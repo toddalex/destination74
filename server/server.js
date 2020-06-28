@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 app.post('/send', (req, res) => {
   console.log(req.body)
 
-  const email = req.body.email
+  const { email , js } = req.body
 
   const mcData = {
     members: [
@@ -48,10 +48,10 @@ app.post('/send', (req, res) => {
       if (err) {
          res.json({error: err})
       } else {
-        if (req.body.js) {
+        if (js) {
           res.sendStatus(200);
         } else {
-          console.log('success!!!!')
+          console.log('get javascript')
           // res.redirect('/success.html')
         }
       }

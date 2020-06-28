@@ -6,7 +6,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Destination 74</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -158,12 +158,12 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="md-form mb-0">
-                                            <input type="text" id="name" name="name" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" placeholder="Your name">
+                                            <input type="text" id="name" name="name" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" placeholder="Your name" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="md-form mb-0">
-                                            <input type="text" id="email" name="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" placeholder="Email address">
+                                            <input type="text" id="email" name="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" placeholder="Email address" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                                             <br>
                                         </div>
                                     </div>
@@ -171,7 +171,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="md-form mb-0">
-                                            <input type="text" id="subject" name="subject" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" placeholder="Subject">
+                                            <input type="text" id="subject" name="subject" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" placeholder="Subject" required>
                                             <br>
                                         </div>
                                     </div>
@@ -179,7 +179,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="md-form" height="500">
-                                            <textarea type="text" id="message" name="message" rows="8" class="form-control md-textarea" placeholder="Your message"></textarea>
+                                            <textarea type="text" id="message" name="message" rows="8" class="form-control md-textarea" placeholder="Your message" required></textarea>
                                             <br>
                                         </div>
                                         <div class="form-check">
@@ -191,7 +191,7 @@
                                 </div>
                             </form>
                             <div class="text-center text-md-center">
-                                <button class="btn btn-primary mx-auto" id="cta">Send</button>
+                                <button class="btn btn-primary mx-auto" type="submit" id="submit">Send</button>
                             </div>
                             <div class="status"></div>
                         </div>
