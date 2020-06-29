@@ -86,6 +86,7 @@ document.getElementById('submit').addEventListener('click', event => {
                 document.getElementById('submit').style.display = 'block';
                 document.getElementById('subscribe-header').innerHTML = 'Subscribe to receive updates!';
                 document.getElementById('submit').innerHTML = 'Submit';
+                document.getElementById('subscribe-form').reset();
             }, 3000)
         } else {
            console.log('failed to send.')
