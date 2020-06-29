@@ -19,8 +19,6 @@ app.get('/', (req, res) => {
 });
 
 app.post('/send', (req, res) => {
-  console.log(req.body)
-
   const { email , js } = req.body
 
   const mcData = {
