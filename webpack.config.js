@@ -11,7 +11,8 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/
       },
@@ -20,9 +21,19 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       },
       {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-        loader: 'url-loader?limit=100000'
-      }
+        //IMAGE LOADER
+        test: /\.(jpe?g|png|gif|svg)$/,
+        use: [
+          {
+            loader:'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'img/',
+              publicPath: 'img/'
+            }
+          }
+        ]
+      },
     ]
   },
 
