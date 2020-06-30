@@ -1,3 +1,23 @@
+// import all the image files, optimize for webpack
+import aImg from '../assets/img/a.jpg';
+import bImg from '../assets/img/b.jpeg';
+import fImg from '../assets/img/f.jpeg';
+import mImg from '../assets/img/m.jpeg';
+import deanHeadshot from '../assets/img/dean.jpeg';
+import kariHeadshot from '../assets/img/kari.jpeg';
+import d74Logo from '../assets/img/destination74logo2.png';
+import d74favicon from '../assets/img/favicon.png';
+
+
+const imageA = document.getElementById('imageA').src = aImg;
+const imageB = document.getElementById('project-img').src = bImg;
+const imageF = document.getElementById('imageF').src = fImg;
+const imageM = document.getElementById('imageM').src = mImg;
+const kari = document.getElementById('kari').src = kariHeadshot;
+const dean = document.getElementById('dean').src = deanHeadshot;
+const logo = document.getElementById('logo').src = d74Logo;
+const favicon = document.getElementById('favicon').href = d74favicon;
+
 // Start of use strict
 (function ($) {
 "use strict"; 
