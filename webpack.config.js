@@ -23,20 +23,10 @@ module.exports = {
       {
         //IMAGE LOADER
         test: /\.(jpe?g|png|gif|svg)$/,
-        use: [
-          {
-            loader:'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'img/',
-              publicPath: 'img/'
-            }
-          }
-        ]
+        use: ['file-loader'],
       },
     ]
   },
-
   devServer: {
     port: 3000,
     open: true,
