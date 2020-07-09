@@ -15,6 +15,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="./public/css/styles.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -27,8 +28,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Services</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#biocontainer">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#whatweoffer">What We Offer</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact-section">Contact</a></li>
                     </ul>
                 </div>
@@ -40,7 +41,7 @@
                 <div class="mx-auto text-center">
                     <h1 class="mx-auto my-0 text-uppercase">Destination 74</h1>
                     <h2 class=" mx-auto mt-2 mb-5">Your gateway to adventures and memories along California's Scenic Route 74</h2>
-                    <a class="btn btn-primary js-scroll-trigger" href="#about">Learn More</a>
+                    <a class="btn btn-primary js-scroll-trigger" href="#learnmore">Learn More</a>
                 </div>
             </div>
         </header>
@@ -57,7 +58,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="biocontainer">
+                <div class="biocontainer" id="biocontainer">
                     <div class="biocard">
                         <img src="assets/img/kari.jpeg" alt="Kari Hay headshot"class="headshot" id="kari"/>
                         <h3>Kari Hay</h3>
@@ -83,7 +84,7 @@
         <section class="projects-section bg-light" id="projects">
             <div class="container">
                 <!-- Featured Project Row-->
-                <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                <div class="row align-items-center no-gutters mb-4 mb-lg-5" id="learnmore">
                     <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" id="imageA" src="assets/img/a.jpg" alt="looking out at Santa Rosa Moutains" /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
@@ -91,12 +92,13 @@
                             <p class="text-black-50 mb-0">
                                 As you enjoy the epic vistas of our scenic highway we can provide you with some additional 
                                 routes and ventures, hidden gems, event planning, spa and salon services and more. 
+                                <a class="js-scroll-trigger" href="#contact-section">Contact us to get started!</a>
                             </p>
                         </div>
                     </div>
                 </div>
                 <!-- Project One Row-->
-                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0" id="whatweoffer">
                     <div class="col-lg-6"><img class="img-fluid" id="project-img" src="assets/img/b.jpeg" alt="sound bathing class" /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
@@ -106,7 +108,7 @@
                                     <p class="mb-0 text-white-50">
                                         From Palm Springs to Idyllwild, adventures abound along Route 74; photography tours, guided mountain bike rides, Jeep tours, 
                                         horseback rides, soundbathing, art classes and more we can help curate your trip by connecting you with local guides, events and more. 
-                                        And as your mountain concierge, we can even help you find the perfect place to stay.
+                                        And as your mountain concierge, we can even help you find the perfect place to stay. 
                                     </p>
                                     <hr class="d-none d-lg-block mb-0 ml-0" />
                                 </div>
